@@ -23,3 +23,7 @@ RUN pip install -U \
         sphinxcontrib-matlabdomain
 
 RUN apk del --no-network .doxy-build-deps
+RUN apk add --no-cache \
+        libxslt
+
+CMD ["python3"]
