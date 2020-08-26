@@ -28,7 +28,7 @@ RUN apt-get update \
  && apt-get autoremove \
  && apt-get clean
 
-RUN pip install -U -e git+https://github.com/sphinx-doc/sphinx.git@3.x#egg=sphinx
+RUN pip install -U -e git+https://github.com/sphinx-doc/sphinx.git@3.2.x#egg=sphinx
 RUN pip install -U -e git+https://github.com/michaeljones/breathe.git@v4.14.1#egg=breathe
 RUN pip install -U \
         sphinx-rtd-theme \
