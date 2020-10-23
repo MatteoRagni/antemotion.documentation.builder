@@ -25,6 +25,7 @@ RUN apt-get update \
         texlive-luatex \
         texlive-xetex \
         latexmk \
+        fonts-font-awesome \
  && apt-get autoremove \
  && apt-get clean
 
@@ -36,6 +37,9 @@ RUN pip install -U \
         sphinx-fontawesome \
         exhale \
         sphinxcontrib-matlabdomain \
-        sphinxcontrib-mermaid
+        sphinxcontrib-mermaid \
+        sphinxcontrib-bibtex
+
+RUN luaotfload-tool --update
 
 CMD ["/bin/sh"]
